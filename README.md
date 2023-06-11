@@ -1,13 +1,32 @@
-# 🚀 Demo project to show the demo of new docker compose module in Spring Boot 🚀
+# 🚀 Demo project to show the demo of containerization methods using Dockerfile,Buildpacks,Jib 🚀
 
-A new module, `spring-boot-docker-compose` introduced in Spring Boot 3.1.0 which provides integration with Docker Compose. When your app is starting up, the Docker Compose integration will look for a configuration file in the current working directory and automatically bring the docker containers up and make connection configurations.
+## Commands while using Dockerfile
 
-## Important Links & Commands
+|     Command       |     Description          |
+| ------------- | ------------- |
+| "mvn clean install" | To generate a jar inside target folder |
+| "docker build . -t eazybytes/accounts" | To generate a docker image based on a Dockerfile |
+| "docker run  -p 8081:8080 eazybytes/accounts" | To start a docker container based on a given image |
 
-* [Spring-Boot-3.1-Release-Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.1-Release-Notes)
-* [spring-boot-docker-compose documentation](https://docs.spring.io/spring-boot/docs/3.1.0/reference/html/features.html#features.docker-compose)
-* docker pull mysql
-* docker run -p 3306:3306 --name accountsdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=accountsdb -d mysql
+## Links & commands of Buildpacks
+
+* [Buildpacks Website](https://buildpacks.io)
+
+|     Command       |     Description          |
+| ------------- | ------------- |
+| "mvn spring-boot:build-image" | To generate a docker image using Buildpacks |
+| "docker run  -p 8081:8080 eazybytes/accounts" | To start a docker container based on a given image |
+
+## Links & commands of Jib
+
+* [Jib GitHub](https://github.com/GoogleContainerTools/jib)
+* [Getting started with Jib](https://cloud.google.com/java/getting-started/jib)
+
+|     Command       |     Description          |
+| ------------- | ------------- |
+| "mvn compile com.google.cloud.tools:jib-maven-plugin:3.3.2:build" | To generate a docker image with out Docker daemon |
+| "mvn compile com.google.cloud.tools:jib-maven-plugin:3.3.2:dockerBuild" | To generate a docker image with Docker daemon |
+
 
 ## Contact the Instructor
 
