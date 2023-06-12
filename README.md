@@ -11,6 +11,7 @@
 ## Links & commands of Buildpacks
 
 * [Buildpacks Website](https://buildpacks.io)
+* [Buildpacks features comparison](https://buildpacks.io/features/#comparison)
 
 |     Command       |     Description          |
 | ------------- | ------------- |
